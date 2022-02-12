@@ -1,1 +1,35 @@
-//- Default layout of the project
+doctype html
+html(dir="rtl")
+	head
+		include ../partials/_meta
+		block pageTitle
+			title Document
+		|
+		|
+		// Styles
+		include ../partials/_styles
+
+	body
+		// Fallback javascript
+		include ../partials/_no-script
+		|
+		|
+		block navbar
+			- let activePage = 'home'
+			include ../partials/_navbar
+		|
+		|
+		block content
+		|
+		|
+		include ../partials/_footer
+		|
+		|
+		include ../partials/_whatsapp-icon
+		|
+		|
+		include ../partials/_search-overlay
+		|
+		|
+		// Scripts
+		include ../partials/_scripts
