@@ -1,1 +1,195 @@
-//- index.html
+extends ./layouts/default
+
+block pageTitle
+	title الرئيسية | اكتبلي لخدمات الكتابة
+
+block navbar
+	- let activePage = 'home'
+	include ./partials/_navbar
+
+block content
+	// Slider
+	.slider
+		.owl-carousel.owl-theme
+			// Slide 1
+			.slider__item.text-white
+				.slider__item-caption
+					h2.mb-4.h1 كيفية كتابة خطة البحث العلمي
+					p إعداد خطة بحث وفق الأسس العلمية الصحيحة  بواسطة فريق مختص بالبحث العلمي  وعلى خبرة واسعة بحيثيات البحث
+					button.btn.btn-light.text-primary.btn-lg.rounded-pill.mt-4 عرض التفاصيل
+			// Slide 2
+			.slider__item.text-white
+				.slider__item-caption
+					h2.mb-4.h1 التحليل ومناقشة النتائج
+					p استخراج النتائج ومن ثم إجراء تحليل لها وفق المعطيات الواردة ومناقشتها على النحو المطلوب
+					button.btn.btn-light.text-primary.btn-lg.rounded-pill.mt-4 عرض التفاصيل
+			// Slide 3
+			.slider__item.text-white
+				.slider__item-caption
+					h2.mb-4.h1 كتابة المحتوى التسويقي
+					p كتابة محتوى متكامل للمواقع الإلكترونية وفق معايير SEO
+					button.btn.btn-light.text-primary.btn-lg.rounded-pill.mt-4 اطلب الخدمة
+			// Slide 4
+			.slider__item.text-white
+				.slider__item-caption
+					h2.mb-4.h1 إنشاء متجر إلكتروني احترافي
+					p تصميم وبرمجة متجر إلكتروني متوافق مع محركات البحث ويساهم في تسويق المنتجات والخدمات أونلاين
+					button.btn.btn-light.text-primary.btn-lg.rounded-pill.mt-4 اطلب الخدمة
+			// Slide 5
+			.slider__item.text-white
+				.slider__item-caption
+					h2.mb-4.h1 إنشاء موقع إلكتروني للشركات
+					p  تصميم وبرمجة موقع إلكتروني متوافق مع محركات البحث ويعمل على تسويق خدماتك والتواصل مع العملاء
+					button.btn.btn-light.text-primary.btn-lg.rounded-pill.mt-4 اطلب الخدمة
+	// slider-end
+	|
+	|
+	// Messages
+	section.messages.py-5.text-center.text-primary
+		.container
+			.row
+				// Message 1
+				.col-md-4.mb-4.mb-md-0
+					i.fas.fa-award.fa-3x.mb-3
+					h5 حقّق الانتشار الاوسع
+					p نساعدك في جلب عملاء جدد.
+				// Message 2
+				.col-md-4.mb-4.mb-md-0
+					i.fas.fa-user-graduate.fa-3x.mb-3
+					h5 تميّز برسالتك العلمية
+					p نساعدك في كتابة رسالة علمية مميزة.
+				// Message 3
+				.col-md-4.mb-4.mb-md-0
+					div.mb-3.pt-3
+						i.fas.fa-star.text-warning.fa-3x
+						i.fas.fa-star.text-warning.fa-3x
+						i.fas.fa-star.text-warning.fa-3x
+						i.fas.fa-star.text-warning.fa-3x
+						i.fas.fa-star.text-warning.fa-3x
+					h5 4.96
+					p متوسط جودة خدماتنا
+	// messages-end
+	|
+	|
+	// About us
+	section.py-5
+		h2.section-title عن اكتبلي
+		p.section-description منصة تقدم خدمات كتابة المحتوى للدراسات العلمية والمواقع وخدمات الووردبريس من قبل مختصين محترفين بالمجالات المتناولة.
+
+		.container
+			.row.text-center
+				.col-md-4.pt-3
+					h4.section-subtitle رؤيتنا
+					p نحن فريق عمل اكتبلي نؤمن بأن الأبحاث التي تعتبر الأداة الأنجع للمعرفة هي من أهم أسباب تطور المجتمع وتقدمه.
+				.col-md-4.pt-3
+					h4.section-subtitle رسالتنا
+					p تنفيذ جميع خدماتنا وفق القواعد والأسس العلمية المعتمدة والصحيحة.
+				.col-md-4.pt-3
+					h4.section-subtitle أهدافنا
+					p تعميم الأبحاث العلمية الدقيقة والمعتمدة وتقديم  قدر من التسهيل في تسويق الخدمات والمنتجات لأصحاب المواقع والشركات ومستخدميها.
+	// about-us-end
+	|
+	|
+	// Services
+	section.services.py-5.bg-light
+		.container
+			h2.section-title خدماتنا
+			p.section-description
+				| نسعى لتقديم أفضل خدمات الكتابة الاحترافية للباحثين والرياديين وأصحاب المشاريع
+				| التجارية.
+			.row.justify-content-center
+				.col-md-4
+					.services__item.p-3
+						i.far.fa-newspaper
+						h5.mb-3 كتابة المحتوى للمواقع
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') اطلب الخدمة
+				.col-md-4
+					.services__item.p-3
+						i.far.fa-file-word
+						h5.mb-3 كتابة مقترح البحث العلمي
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') اطلب الخدمة
+				.col-md-4
+					.services__item.p-3
+						i.fas.fa-microscope
+						h5.mb-3 إعداد البحث العلمي
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') اطلب الخدمة
+				.col-md-4
+					.services__item.p-3
+						i.fab.fa-wordpress
+						h5.mb-3 تطوير مواقع الووردبريس
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') اطلب الخدمة
+				.col-md-4
+					.services__item.p-3
+						i.fas.fa-shopping-cart
+						h5.mb-3 إنشاء المتاجر الإلكترونية
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') اطلب الخدمة
+				.col-md-4
+					.services__item.p-3
+						i.fas.fa-arrows-alt
+						h5.mb-3 خدمات أخرى
+						p هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+						.text-center.text-md-left.mt-4
+							a.btn.btn-outline-primary.rounded-pill(href='#') عرض كافة الخدمات
+	// services-end
+	|
+	|
+	// Blog posts
+	section.blog.py-5.bg-light
+		.container
+			h2.section-title أحدث تدوينات اكتبلي
+			p.section-description يجبب اكتبلي في تدويناته عن الأسئلة التي قد تبحث عنها حول موضوع الخدمات التي يقدمها لك.
+			.row
+				.col-md-4.mb-4.mb-md-0
+					.card
+						a(href="#")
+							img.card-img(src='https://picsum.photos/200/300?random=1')
+						.card-body
+							a.text-decoration-none.text-dark(href="#")
+								h5.card-title خطوات كتابة بحث علمي احترافي
+							p.card-text
+								| هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+								| النص
+							.pt-3.text-left
+								a.text-decoration-none.text-primary(href='#') اقرأ المقال ←
+				.col-md-4.mb-4.mb-md-0
+					.card
+						a(href="#")
+							img.card-img(src='https://picsum.photos/200/300?random=1')
+						.card-body
+							a.text-decoration-none.text-dark(href="#")
+								h5.card-title خطوات كتابة بحث علمي احترافي
+							p.card-text
+								| هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+								| النص
+							.pt-3.text-left
+								a.text-decoration-none.text-primary(href='#') اقرأ المقال ←
+
+				.col-md-4.mb-4.mb-md-0
+					.card
+						a(href="#")
+							img.card-img(src='https://picsum.photos/200/300?random=1')
+						.card-body
+							a.text-decoration-none.text-dark(href="#")
+								h5.card-title خطوات كتابة بحث علمي احترافي
+							p.card-text
+								| هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
+								| النص
+							.pt-3.text-left
+								a.text-decoration-none.text-primary(href='#') اقرأ المقال ←
+
+			|
+			|
+			.blog__all-articles.mt-5
+				a(href="blog.html")
+					h5 عرض كافة المقالات
+	// blog-posts-end
