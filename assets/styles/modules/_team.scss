@@ -76,3 +76,27 @@
 		}
 	}
 }
+
+.our-team {
+	background: #000;
+
+	[class*='col-'] {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	img {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		margin-bottom: 1rem;
+		border: .5rem solid rgba($americanRiver, .35);
+	}
+
+	.team__name {
+		font-size: 1.5rem;
+		color: $americanRiver;
+	}
+}
