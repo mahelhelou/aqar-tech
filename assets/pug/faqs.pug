@@ -1,0 +1,33 @@
+extends ./layouts/page
+
+block pageTitle
+	title FAQs | Aqar Tech
+
+block navbar
+	- let activePage = 'faqs';
+	include ./partials/_navbar
+
+block pageBannerTitle
+	h1.page-banner__title Most Frequently Asked Questions
+block pageBannerDescription
+
+block content
+	section.faqs.py-5
+		.container
+			.row
+				include ./mixins/_faq-mixin
+				+question({index: 0, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 1, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 2, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 3, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 4, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 5, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 6, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})
+
+				+question({index: 7, title: "Why Aqar Tech?", answer: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe aliquid facere optio repudiandae, quo asperiores?"})

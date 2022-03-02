@@ -1,0 +1,46 @@
+extends ./layouts/default
+
+//- Blocks
+block pageTitle
+	title Home | Aqar Tech
+
+block navbar
+	- let activePage = 'home'
+	include ./partials/_navbar
+
+block content
+	// Showcase
+	section.showcase
+		.primary-overlay
+			.container
+				.row
+					.col-lg-6
+						h1.mt-0.mt-md-5.pt-5.font-weight-bolder Everyone Should Be Able to Invest in Something Great!
+						p.lead
+							| Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente accusamus iste rem explicabo esse. Reprehenderit, praesentium quibusdam odio inventore placeat ex porro aliquam similique.
+
+					.col-lg-6
+						.showcase__image
+							img.img-fluid(src='https://picsum.photos/200/300?random=2' alt='')
+	// showcase-end
+	|
+	|
+	include ./partials/_about-us
+	|
+	|
+	include ./partials/_investments
+	// Featured Investment Opportunities
+	+investmentOpportunities({ title: 'Featured Investment Opportunities', investments: 'comingOpps' })
+	// featured-investment-opportunities-end
+
+	// Current Investment Opportunities
+	+investmentOpportunities({ title: 'Current Investment Opportunities', investments: 'currentOpps' })
+	// current-investment-opportunities-end
+	|
+	|
+	// Coming Soon Investment Opportunities
+	+investmentOpportunities({ title: 'Coming Soon Investment Opportunities', investments: 'comingOpps' })
+	// coming-soon-investment-opportunities-end
+	|
+	|
+	include ./partials/_testimonials

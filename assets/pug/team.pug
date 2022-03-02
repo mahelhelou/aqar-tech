@@ -1,0 +1,22 @@
+extends ./layouts/page
+
+block pageTitle
+	title Team | Aqar Tech
+
+block navbar
+	- let activePage = 'team'
+	include ./partials/_navbar
+
+block pageBannerTitle
+	h1.page-banner__title Our Collaborative Team
+block pageBannerDescription
+	p.page-banner__description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, accusantium.
+
+block content
+	section.team.py-5
+		.container
+			include ./mixins/_team-member-mixin
+			+teamMember({ name: 'Ali Ben Jaber' })
+			+teamMember({ name: 'Ali Ben Jaber' })
+			+teamMember({ name: 'Ali Ben Jaber' })
+	// coaches-end
