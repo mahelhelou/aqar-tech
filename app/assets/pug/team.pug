@@ -1,0 +1,22 @@
+extends ./layouts/page
+
+block pageTitle
+	title Team | Aqar Tech
+
+block navbar
+	- let activePage = 'team'
+	include ./partials/_navbar
+
+block pageBannerTitle
+	h1.page-banner__title Our Collaborative Team
+block pageBannerDescription
+	p.page-banner__description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit, accusantium.
+
+block content
+	section.team.py-5
+		.container
+			include ./mixins/_team-member-mixin
+			+teamMember({ img: 'https://picsum.photos/200/300?random=1', name: 'Ali Ben Jaber' })
+			+teamMember({ img: 'https://picsum.photos/200/300?random=2', name: 'Omar Ben Saed' })
+			+teamMember({ img: 'https://picsum.photos/200/300?random=3', name: 'Ahmed Ben Khalifa' })
+	// coaches-end

@@ -1,4 +1,5 @@
 const { src, dest, watch, series } = require("gulp");
+const ghPages = require("gulp-gh-pages");
 
 // Html packages
 const pug = require("gulp-pug");
@@ -40,7 +41,7 @@ function styles() {
 function scripts() {
 	const jsPath = {
 		jquery: "app/assets/scripts/libs/jquery.min.js",
-		popper: "app/assets/scripts/libs/popper.min.js",
+		// popper: "app/assets/scripts/libs/popper.min.js",
 		owl: "app/assets/scripts/libs/owl.carousel.min.js",
 		bootstrap: "app/assets/scripts/libs/bootstrap.min.js",
 		app: "app/assets/scripts/app.js",
@@ -83,10 +84,17 @@ function watchFiles() {
 	watch("app/assets/scripts/**/*.js", series(scripts, browserSyncReload));
 }
 
+// Deploy to github pages
+function deploy() {
+	return src("./app/**/*").pipe(ghPages());
+}
+
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browserSyncServe = browserSyncServe;
 exports.watchFiles = watchFiles;
+exports.deploy = deploy;
+
 // Default Gulp Task
 exports.default = series(html, styles, scripts, browserSyncServe, watchFiles);

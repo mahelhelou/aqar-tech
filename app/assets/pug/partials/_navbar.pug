@@ -1,38 +1,27 @@
 //-
 	- Main navbar
 // Navbar
-//- nav.navbar.navbar-expand-lg.fixed-top.navbar-light.bg-light.py-4
-nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3
+nav.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.px-3.py-4
 	.container-fluid
 		a.navbar-brand(href='index.html')
 			div.navbar-brand__box
-				img(src="images/icons/icon--oktobly-logo-blue-transparent.png" class="img-fluid" alt="شعار موقع اكتبلي")
+				//- img(src="images/icons/icon--oktobly-logo-blue-transparent.png" class="img-fluid" alt="شعار موقع اكتبلي")
+				h3 Aqar Tech
 		button.navbar-toggler(type='button' data-toggle='collapse' data-target='#main-menu' aria-controls='main-menu' aria-expanded='false' aria-label='Toggle navigation')
 			span.navbar-toggler-icon
 		#main-menu.collapse.navbar-collapse
 			ul.navbar-nav.mx-auto
 				li.nav-item(class=activePage == 'home' ? 'active' : '')
-					a.nav-link(href='index.html') الرئيسية
+					a.nav-link(href='index.html') Home
 						span.sr-only (current)
+				li.nav-item(class=activePage == 'investments' ? 'active' : '')
+					a.nav-link(href='investments.html') Investments
+				li.nav-item(class=activePage == 'faqs' ? 'active' : '')
+					a.nav-link(href='faqs.html') FAQs
+				li.nav-item(class=activePage == 'team' ? 'active' : '')
+					a.nav-link(href='team.html') Team
 				li.nav-item(class=activePage == 'about' ? 'active' : '')
-					a.nav-link(href='about.html') عن اكتبلي
-				li.nav-item(class=activePage == 'services' || activePage == 'service' || activePage == 'sub-service' ? 'active' : '')
-					a.nav-link(href='services.html') خدماتنا
-				li.nav-item(class=activePage == 'blog' ? 'active' : '')
-					a.nav-link(href='blog.html') المدونة
-				li.nav-item(class=activePage == 'guarantees' ? 'active' : '')
-					a.nav-link(href='guarantees.html') الضمانات
+					a.nav-link(href='about.html') About Us
 				li.nav-item(class=activePage == 'contact' ? 'active' : '')
-					a.nav-link(href='contact.html') تواصل معنا
-			// Navbar social media
-			.navbar__social-media
-				a(href="https://wa.me/972595963950" target="_blank")
-					i.fab.fa-whatsapp
-				a(href="https://www.facebook.com/OktoblyWebsite" target="_blank")
-					i.fab.fa-facebook-f
-				a(href="https://twitter.com/OktoblyWebsite" target="_blank")
-					i.fab.fa-twitter
-				a(href="https://www.instagram.com/OktoblyWebsite" target="_blank")
-					i.fab.fa-instagram
-				//- i.fas.fa-search.search-btn
+					a.nav-link(href='contact.html') Contact Us
 // navbar-end

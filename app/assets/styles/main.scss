@@ -1,1 +1,41 @@
 // Main SCSS
+
+// Libraries
+@import 'libs/all.min.scss';
+@import 'libs/bootstrap.min.scss';
+@import 'libs/owl.carousel.min.scss';
+@import 'libs/owl.theme.default.min.scss';
+
+// Base
+@import 'base/mixins';
+@import 'base/vars';
+@import 'base/globals';
+@import 'base/styles-reset';
+
+// Modules
+@import 'modules/navbar';
+@import 'modules/showcase';
+@import 'modules/page-banner';
+@import 'modules/investments';
+@import 'modules/about-us';
+@import 'modules/faqs';
+@import 'modules/testimonials';
+@import 'modules/team';
+@import 'modules/footer';
+// @import 'modules/slider';
+// @import 'modules/messages';
+// @import 'modules/services';
+// @import 'modules/service-ordering';
+// @import 'modules/blog';
+// @import 'modules/offers';
+// @import 'modules/testimonials';
+// @import 'modules/page-banner';
+// @import 'modules/service-banner';
+// @import 'modules/single-service';
+// @import 'modules/search-and-cats';
+// @import 'modules/guarantees';
+// @import 'modules/service-guarantees';
+// @import 'modules/connect';
+// @import 'modules/whatsapp-icon';
+// @import 'modules/table-of-contents';
+// @import 'modules/divider';
