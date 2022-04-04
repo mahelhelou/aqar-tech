@@ -50,7 +50,10 @@
 
 	.nav-item.active {
 		font-weight: bold;
+	}
 
+	.nav-item:hover,
+	.nav-item.active {
 		&::after {
 			width: 7.5%;
 

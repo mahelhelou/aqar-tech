@@ -1,11 +1,10 @@
 const { src, dest, watch, series } = require("gulp");
-const ghPages = require("gulp-gh-pages");
 
 // Html packages
 const pug = require("gulp-pug");
 
 // Styles packages
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require("sass"));
 
 // Scripts packages
 const terser = require("gulp-terser");
@@ -46,7 +45,7 @@ function scripts() {
 		bootstrap: "app/assets/scripts/libs/bootstrap.min.js",
 		app: "app/assets/scripts/app.js",
 	};
-	// return src([jsPath.jquery, jsPath.popper, jsPath.owl, jsPath.bootstrap, jsPath.app], { sourcemaps: true })
+
 	return src(Object.values(jsPath), { sourcemaps: true })
 		.pipe(concat("bundled.js"))
 		.pipe(terser())
@@ -84,17 +83,10 @@ function watchFiles() {
 	watch("app/assets/scripts/**/*.js", series(scripts, browserSyncReload));
 }
 
-// Deploy to github pages
-function deploy() {
-	return src("./app/**/*").pipe(ghPages());
-}
-
 exports.html = html;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browserSyncServe = browserSyncServe;
 exports.watchFiles = watchFiles;
-exports.deploy = deploy;
-
 // Default Gulp Task
 exports.default = series(html, styles, scripts, browserSyncServe, watchFiles);
