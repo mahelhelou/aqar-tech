@@ -6,7 +6,7 @@ jQuery(function ($) {
 	let windowHeight = $(window).height();
 	let windowWidth = $(window).width();
 
-	if (windowWidth < 1920) {
+	if (windowWidth > 991 && windowHeight < 1920) {
 		$(".showcase").height(windowHeight - navbarHeight);
 	}
 

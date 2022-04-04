@@ -1,0 +1,14 @@
+extends ./layouts/default
+
+//- Blocks
+block pageTitle
+	title Investment | Aqar Tech
+
+block navbar
+	- let activePage = 'investments'
+	include ./partials/_navbar
+
+block content
+	h1 The Content of Single Opportunity
+	h2 2 columns layout (8-4)
+	h3 Other great opportunities...

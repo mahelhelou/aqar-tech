@@ -78,25 +78,32 @@
 }
 
 .our-team {
-	background: #000;
-
-	[class*='col-'] {
+	[class*="col-"] {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
+		justify-content: center;
 	}
 
-	img {
-		width: 200px;
-		height: 200px;
+	.team__img {
+		width: 150px;
+		height: 150px;
 		border-radius: 50%;
-		margin-bottom: 1rem;
+		overflow: hidden;
 		border: .5rem solid rgba($americanRiver, .35);
+		margin-bottom: 1rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+
+		}
 	}
 
 	.team__name {
-		font-size: 1.5rem;
+		font-size: 1.375rem;
 		color: $americanRiver;
 	}
 }

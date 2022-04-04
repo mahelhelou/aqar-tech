@@ -30,9 +30,13 @@
 		margin-top: 3rem;
 		height: 450px;
 		border-top-left-radius: 4rem;
-		border-bottom-right-radius: 4rem;
 		border: .25rem solid rgba($americanRiver, .25);
 		overflow: hidden;
+		box-shadow: .25rem .25rem .75rem rgba(0, 0, 0, .33);
+
+		@include responsive(atSmall) {
+			height: 250px;
+		}
 
 		img {
 			width: 100% !important;

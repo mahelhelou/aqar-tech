@@ -4,14 +4,16 @@
 		// padding-bottom: 1.5rem;
 
 		&::after {
-			position: absolute;
-			content: '';
-			width: 25%;
-			height: 0.125rem;
-			background: #FFF;
-			left: 50%;
-			bottom: 0;
-			transform: translateX(-50%);
+			@include responsive(atLarge) {
+				position: absolute;
+				content: '';
+				width: 25%;
+				height: 0.125rem;
+				background: #FFF;
+				left: 50%;
+				bottom: 0;
+				transform: translateX(-50%);
+			}
 		}
 	}
 
