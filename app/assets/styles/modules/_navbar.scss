@@ -30,12 +30,11 @@
 
 			.nav-link {
 				color: #333 !important;
+				font-size: 1.125rem;
 
 				@include responsive(atSmall) {
 					text-align: center !important;
 				}
-
-				font-size: 1.125rem;
 
 			}
 		}
@@ -49,7 +48,6 @@
 		}
 	}
 
-	.nav-item:hover,
 	.nav-item.active {
 		font-weight: bold;
 
@@ -59,10 +57,6 @@
 			@include responsive(atLarge) {
 				width: 45%;
 			}
-		}
-
-		.nav-link {
-			color: #000;
 		}
 	}
 
