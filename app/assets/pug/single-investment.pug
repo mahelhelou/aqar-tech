@@ -9,6 +9,21 @@ block navbar
 	include ./partials/_navbar
 
 block content
-	h1 The Content of Single Opportunity
-	h2 2 columns layout (8-4)
-	h3 Other great opportunities...
+	section.single-investment.py-5
+		.container
+			.row
+				.col-md-8
+					.single-investment__img
+						img(src="https://picsum.photos/200/300?random=2")
+					.single-investment__content.py-5
+						h2.single-investment__content-title About O2 Hdyrated Foold Investment Opportunity
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel dolor reprehenderit illo doloremque illum tempore magni repellat voluptates nostrum? Asperiores necessitatibus quod veritatis excepturi qui, est illum debitis eaque exercitationem error eos beatae cumque repudiandae quia, eum ratione vitae fugit magnam optio. Quia placeat ex dicta, quos quisquam earum!
+				.col-md-4
+					h1.single-investment__title O2 Hydrated Food
+					p.single-investment__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam libero ipsam, magni maiores temporibus numquam.
+
+	section.related-posts.py-5
+		h2.section-title Other Great Opportunities
+		.container
+			.row
+			
