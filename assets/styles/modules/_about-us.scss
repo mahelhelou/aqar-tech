@@ -1,0 +1,17 @@
+.about-us {
+	[class*="col-"] {
+		display: flex;
+		flex-direction: column;
+
+		.about-us__item {
+			padding: 1.5rem;
+			background: $americanRiver;
+			color: #FFFDFA;
+			flex: 1;
+		}
+	}
+
+	.fas {
+		font-size: 2.5rem;
+	}
+}

@@ -1,0 +1,109 @@
+.team {
+	img {
+		width: 250px;
+		height: 250px;
+		border-radius: 50%;
+		border: .5rem solid rgba($americanRiver, .35);
+		object-fit: cover;
+
+		@include responsive(atSmall) {
+			width: 200px;
+			height: 200px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	.row {
+		align-items: center;
+
+		@include responsive(atSmall) {
+			padding-top: .5rem;
+			padding-bottom: .5rem;
+		}
+
+		@include responsive(atMedium) {
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
+
+		&:nth-child(even) {
+			.team__img {
+				@include responsive(atMedium) {
+					order: 2;
+				}
+			}
+
+			@include responsive(atMedium) {
+				order: 1;
+			}
+		}
+	}
+
+	&:nth-child(odd) {
+		.team__img {
+			@include responsive(atMedium) {
+				order: 1;
+			}
+		}
+
+		.team__info {
+			@include responsive(atMedium) {
+				order: 2;
+			}
+		}
+	}
+
+	.team__info {
+		.team__name {
+			color: $chiGong;
+			font-size: 1.75rem;
+			margin: 1.25rem;
+			text-align: center;
+
+			@include responsive(atMedium) {
+				font-size: 2.25rem;
+				text-align: left;
+				margin-bottom: .75rem;
+			}
+		}
+
+		p {
+			@include responsive(atMedium) {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
+
+.our-team {
+	[class*="col-"] {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.team__img {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		overflow: hidden;
+		border: .5rem solid rgba($americanRiver, .35);
+		margin-bottom: 1rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+
+		}
+	}
+
+	.team__name {
+		font-size: 1.375rem;
+		color: $americanRiver;
+	}
+}
