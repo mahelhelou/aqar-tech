@@ -1,0 +1,7 @@
+//- Team member (Team page)
+mixin relatedPost(relatedPostObj)
+	.col-md-3.mb-5.mb-md-0
+		img.img-fluid(src= relatedPostObj.img)
+		h3= relatedPostObj.title
+		p= relatedPostObj.description
+		a.link-danger.mt-4(href='single-investment.html') View Opportunity

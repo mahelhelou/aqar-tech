@@ -62,6 +62,23 @@ section {
 		@include responsive(atSmall) {
 			font-size: 1.625rem !important;
 		}
+
+		&--left {
+			text-align: left;
+
+			&::after {
+				display: none;
+			}
+
+			@include responsive(atSmall) {
+				text-align: center;
+			}
+		}
+
+		&--half-margin {
+			margin-bottom: 1.5rem;
+			padding-bottom: 0.875rem;
+		}
 	}
 
 	.section-description {

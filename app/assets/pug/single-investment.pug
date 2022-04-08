@@ -23,7 +23,11 @@ block content
 					p.single-investment__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam libero ipsam, magni maiores temporibus numquam.
 
 	section.related-posts.py-5
-		h2.section-title Other Great Opportunities
 		.container
+			h2.section-title.section-title--left.section-title--half-margin Other Great Opportunities
+			include ./mixins/_related-post-mixin
 			.row
-			
+				+relatedPost({img: 'https://picsum.photos/200/300?random=2', title: 'Royal Estate Home', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, amet?'})
+				+relatedPost({img: 'https://picsum.photos/200/300?random=2', title: 'Royal Estate Home', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, amet?'})
+				+relatedPost({img: 'https://picsum.photos/200/300?random=2', title: 'Royal Estate Home', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, amet?'})
+				+relatedPost({img: 'https://picsum.photos/200/300?random=2', title: 'Royal Estate Home', description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, amet?'})

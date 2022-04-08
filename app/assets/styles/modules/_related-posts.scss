@@ -1,0 +1,15 @@
+.related-posts {
+	img {
+		height: 225px;
+		margin-bottom: 0.65rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		margin-bottom: 0.65rem;
+	}
+
+	[class*='col-']:last-child {
+		margin-bottom: 0 !important;
+	}
+}
