@@ -1,0 +1,1 @@
+<!-- To know how to remove pagination in archive page -->
