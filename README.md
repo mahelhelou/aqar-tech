@@ -1,4 +1,10 @@
-# READ ME
+# Aqar Tech Project
+
+## Tasks
+
+- Investment CPT
+- Testimonial CPT
+  - Quote owner position
 
 ## Resources
 

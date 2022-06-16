@@ -59,6 +59,8 @@ function aqar_tech_post_types() {
 	// FAQ post type
 	register_post_type( 'faq', [
 		'supports'        => [ 'title', 'editor' ],
+		'has_archive'     => true,
+		'rewrite'         => [ 'slug' => 'faqs' ],
 		'public'          => true,
 		'labels'          => [
 			'name'          => __( 'FAQ' ),

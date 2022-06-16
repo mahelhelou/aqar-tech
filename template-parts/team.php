@@ -3,30 +3,23 @@
   <h2 class="section-title">Meet Our Team</h2>
   <div class="container">
     <div class="row">
-      <div class="col-md-3 mt-4 mt-md-0">
-        <div class="team__img"><img class="img-fluid" src="https://picsum.photos/200/300?random=1"></div>
-        <div class="team__info">
-          <h3 class="team__name">Ali Ben Jaber</h3>
-        </div>
-      </div>
-      <div class="col-md-3 mt-4 mt-md-0">
-        <div class="team__img"><img class="img-fluid" src="https://picsum.photos/200/300?random=1"></div>
-        <div class="team__info">
-          <h3 class="team__name">Ali Ben Jaber</h3>
-        </div>
-      </div>
-      <div class="col-md-3 mt-4 mt-md-0">
-        <div class="team__img"><img class="img-fluid" src="https://picsum.photos/200/300?random=1"></div>
-        <div class="team__info">
-          <h3 class="team__name">Ali Ben Jaber</h3>
-        </div>
-      </div>
-      <div class="col-md-3 mt-4 mt-md-0">
-        <div class="team__img"><img class="img-fluid" src="https://picsum.photos/200/300?random=1"></div>
-        <div class="team__info">
-          <h3 class="team__name">Ali Ben Jaber</h3>
-        </div>
-      </div>
+			<?php
+				$args = [
+					'post_type'				=> 'team',
+					'posts_per_page'	=> 4,
+				];
+
+				$team = new WP_Query( $args );
+
+				if ( $team->have_posts() ) {
+					while ( $team->have_posts() ) {
+						$team->the_post();
+						get_template_part( 'template-parts/content/team-home' );
+					}
+				} else {
+					echo '<p class="text-center w-100">No team members found!</p>';
+				}
+			?>
     </div>
   </div>
 </section>

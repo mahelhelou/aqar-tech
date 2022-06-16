@@ -20,7 +20,8 @@
 
   <!-- Navbar-->
   <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light px-3 py-4">
-    <div class="container"><a class="navbar-brand" href="index.html">
+    <div class="container">
+			<a class="navbar-brand" href="<?php echo site_url( '/' ); ?>">
         <div class="navbar-brand__box">
           <h3>Aqar Tech</h3>
         </div>
@@ -30,14 +31,14 @@
           class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="main-menu">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item active"><a class="nav-link" href="index.html">Home<span
+          <li class="nav-item active"><a class="nav-link" href="<?php echo site_url( '/' ); ?>">Home<span
                 class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="investments.html">Investments</a></li>
-          <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo site_url( '/investments' ); ?>">Investments</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo get_post_type_archive_link( 'faq' ); ?>">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo get_post_type_archive_link( 'team' ); ?>">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo site_url( '/about-us' ); ?>">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="<?php echo site_url( '/contact' ); ?>">Contact Us</a></li>
         </ul>
       </div>
     </div>

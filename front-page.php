@@ -42,7 +42,7 @@
 						get_template_part( 'template-parts/investment-card' );
 					}
 				} else {
-					echo '<p>No featured investments found!</p>';
+					echo '<p class="text-center w-100">No featured investments found!</p>';
 				}
 
 				wp_reset_postdata();
@@ -72,7 +72,7 @@
 						get_template_part( 'template-parts/investment-card' );
 					}
 				} else {
-					echo '<p>No current investments found!</p>';
+					echo '<p class="text-center w-100">No current investments found!</p>';
 				}
 
 				wp_reset_postdata();
@@ -102,7 +102,7 @@
 						get_template_part( 'template-parts/investment-card' );
 					}
 				} else {
-					echo '<p>No coming investments found!</p>';
+					echo '<p class="text-center w-100">No coming investments found!</p>';
 				}
 
 				wp_reset_postdata();
