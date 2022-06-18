@@ -11,8 +11,8 @@ function aqar_tech_post_types() {
   register_post_type( 'investment', [
     'show_in_rest'    => true,
     'supports'        => [ 'title', 'editor', 'thumbnail' ],
-    'rewrite'         => [ 'slug' => 'investments' ],
     'has_archive'     => true,
+    'rewrite'         => [ 'slug' => 'investments' ],
     'public'          => true,
     'taxonomies'      => [ 'post_tag', 'category' ],
     'labels'          => [
@@ -44,6 +44,8 @@ function aqar_tech_post_types() {
 	// Team post type
 	register_post_type( 'team', [
 		'supports'        => [ 'title', 'editor', 'thumbnail' ],
+		'has_archive'     => true,
+		'rewrite'         => [ 'slug' => 'team' ],
 		'public'          => true,
 		'labels'          => [
 			'name'          => __( 'Team' ),

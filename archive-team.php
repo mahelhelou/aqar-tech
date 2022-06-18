@@ -13,19 +13,22 @@
 <section class="team py-5">
   <div class="container">
     <?php
-		$args = array(
-			'post_type'				=> 'team',
-			'posts_per_page'	=> -1,
-		);
+			$args = array(
+				'post_type'				=> 'team',
+				'posts_per_page'	=> -1,
+			);
 
-		$team = new WP_Query( $args );
+			$team = new WP_Query( $args );
 
-		if ( $team->have_posts() ) {
-			while ( $team->have_posts() ) {
-				$team->the_post();
-				get_template_part( 'template-parts/content/team' );
+			if ( $team->have_posts() ) {
+				while ( $team->have_posts() ) {
+					$team->the_post();
+					get_template_part( 'template-parts/content/team' );
+				}
+			} else {
+				echo '<p class="text-center w-100">No team members found</p>';
 			}
-		}
+
 			wp_reset_postdata();
 		?>
   </div>

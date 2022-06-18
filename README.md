@@ -3,8 +3,13 @@
 ## Tasks
 
 - Investment CPT
+  - (Select) Industry -> investment_industry
+  - (Number) Amount Raised -> investment_amount_raised
+  - (Number) Preferred Return -> investment_preferred_return
+  - (Select) Equity Multiple -> investment_equity_multiple
+  - (Number) Minimum Investment -> investment_minimum_investment
 - Testimonial CPT
-  - Quote owner position
+  - (Text) Quote owner position
 
 ## Resources
 
