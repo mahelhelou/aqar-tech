@@ -32,13 +32,13 @@
       </button>
       <div class="collapse navbar-collapse" id="main-menu">
         <ul class="navbar-nav mx-auto">
-          <li class="nav-item<?php if ( is_home() ) echo ' active'; ?>">
+          <li class="nav-item<?php if ( is_front_page() ) echo ' active'; ?>">
             <a class="nav-link" href="<?php echo site_url( '/' ); ?>">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item<?php if ( get_post_type() === 'investment' ) echo ' active'; ?>">
-            <a class="nav-link" href="<?php echo get_post_type_arhive_link( 'investment' ); ?>">Investments</a>
+            <a class="nav-link" href="<?php echo get_post_type_archive_link( 'investment' ); ?>">Investments</a>
           </li>
           <li class="nav-item<?php if ( get_post_type() === 'faq' ) echo ' active'; ?>">
             <a class="nav-link" href="<?php echo get_post_type_archive_link( 'faq' ); ?>">FAQs</a>
@@ -46,11 +46,11 @@
           <li class="nav-item<?php if ( get_post_type() === 'team' ) echo ' active'; ?>">
             <a class="nav-link" href="<?php echo get_post_type_archive_link( 'team' ); ?>">Team</a>
           </li>
-          <li class="nav-item<?php if ( is_page() === 'about-us' ) echo ' active'; ?>">
+          <li class="nav-item<?php if ( is_page( 'about-us' ) ) echo ' active'; ?>">
             <a class="nav-link" href="<?php echo site_url( '/about-us' ); ?>">About Us</a>
           </li>
-          <li class="nav-item<?php if ( is_page() === 'contact' ) echo ' active'; ?>">
-            <a class="nav-link" href="<?php echo site_url( '/contact' ); ?>">Contact Us</a>
+          <li class="nav-item<?php if ( is_page( 'contact-us' ) ) echo ' active'; ?>">
+            <a class="nav-link" href="<?php echo site_url( '/contact-us' ); ?>">Contact Us</a>
           </li>
         </ul>
       </div>

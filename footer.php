@@ -6,19 +6,33 @@
         <div class="site-footer__logo-box">
           <h5 class="mb-3">Aqar Tech</h5>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          <div class="mt-4"><a class="social-icon" href="https://www.facebook.com/OktoblyWebsite" target="_blank"><i
-                class="fab fa-facebook"></i></a><a class="social-icon" href="https://twitter.com/OktoblyWebsite"
-              target="_blank"><i class="fab fa-twitter"></i></a><a class="social-icon"
-              href="https://www.instagram.com/OktoblyWebsite" target="_blank"><i class="fab fa-instagram"></i></a></div>
+          <div class="mt-4">
+            <a class="social-icon" href="https://www.facebook.com" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a class="social-icon" href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="social-icon" href="https://www.instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i></a>
+          </div>
         </div>
       </div>
       <!-- Legal info-->
       <div class="col-md-3 mb-4 mb-md-0 text-center text-md-left">
         <h5 class="mb-3">Legal Info.</h5>
         <ul class="site-footer__nav">
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="about.html">About Us</a></li>
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="privacy.html">Privacy Policy</a></li>
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="terms.html">Terms &amp; Conditions</a>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/about-us' ); ?>">About Us</a>
+          </li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/privacy' ); ?>">Privacy Policy</a>
+          </li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/terms' ); ?>">Terms &amp; Conditions</a>
           </li>
         </ul>
       </div>
@@ -26,10 +40,22 @@
       <div class="col-md-3 mb-4 mb-md-0 text-center text-md-left">
         <h5 class="mb-3">Sitemap</h5>
         <ul class="site-footer__nav">
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="investments.html">Investments</a></li>
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="team.html">Our Team</a></li>
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="faqs.html">FAQs</a></li>
-          <li class="mb-3 mb-md-0"><i class="fas fa-caret-right"></i><a href="contact.html">Contact Us</a></li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/investments' ); ?>">Investments</a>
+          </li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/team' ); ?>">Our Team</a>
+          </li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/faqs' ); ?>">FAQs</a>
+          </li>
+          <li class="mb-3 mb-md-0">
+            <i class="fas fa-caret-right"></i>
+            <a href="<?php echo site_url( '/contact-us' ); ?>">Contact Us</a>
+          </li>
         </ul>
       </div>
       <!-- Contact info-->

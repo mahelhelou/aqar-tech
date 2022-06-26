@@ -30,7 +30,7 @@
         </h6>
       </div>
       <div class="text-center mt-4">
-        <a class="link-danger" href="single-investment.html<?php the_permalink(); ?>">View Opportunity</a>
+        <a class="link-danger" href="<?php the_permalink(); ?>">View Opportunity</a>
       </div>
     </div>
   </div>

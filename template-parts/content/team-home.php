@@ -4,7 +4,7 @@
 			if ( has_post_thumbnail() ) {
 				the_post_thumbnail( 'post-thumbnail', ['class' => 'img-fluid'] );
 			} else {
-				echo '<img class="img-fluid" src="' . get_template_directory_uri() . '/assets/images/team-avatar.jpg" alt="">';
+				echo '<img class="img-fluid" src="' . get_template_directory_uri() . '/app/assets/images/team-avatar.png">';
 			}
 		?>
   </div>

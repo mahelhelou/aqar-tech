@@ -2,6 +2,12 @@
 
 ## Tasks
 
+- Categories
+
+  - Current
+  - Featured
+  - Coming Soon
+
 - Investment CPT
   - (Select) Industry -> investment_industry
   - (Number) Amount Raised -> investment_amount_raised

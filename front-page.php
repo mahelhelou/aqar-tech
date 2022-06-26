@@ -30,7 +30,7 @@
 				$args = [
 					'post_type'				=> 'investment',
 					'posts_per_page'	=> 3,
-					'category_name'		=> 'featured'
+					'category_name'		=> 'featured-investment-opportunities'
 				];
 
 
@@ -39,7 +39,7 @@
 				if ( $featured_investments->have_posts() ) {
 					while ( $featured_investments->have_posts() ) {
 						$featured_investments->the_post();
-						get_template_part( 'template-parts/investment-card' );
+						get_template_part( 'template-parts/content/investment' );
 					}
 				} else {
 					echo '<p class="text-center w-100">No featured investments found!</p>';
@@ -61,7 +61,7 @@
 				$args = [
 					'post_type'				=> 'investment',
 					'posts_per_page'	=> 6,
-					'category_name'		=> 'current'
+					'category_name'		=> 'current-investment-opportunities'
 				];
 
 				$current_investments = new WP_Query( $args );
@@ -69,7 +69,7 @@
 				if ( $current_investments->have_posts() ) {
 					while ( $current_investments->have_posts() ) {
 						$current_investments->the_post();
-						get_template_part( 'template-parts/investment-card' );
+						get_template_part( 'template-parts/content/investment' );
 					}
 				} else {
 					echo '<p class="text-center w-100">No current investments found!</p>';
@@ -91,7 +91,7 @@
 				$args = [
 					'post_type'				=> 'investment',
 					'posts_per_page'	=> 3,
-					'category_name'		=> 'coming'
+					'category_name'		=> 'coming-investment-opportunities'
 				];
 
 				$coming_investments = new WP_Query( $args );
@@ -99,7 +99,7 @@
 				if ( $coming_investments->have_posts() ) {
 					while ( $coming_investments->have_posts() ) {
 						$coming_investments->the_post();
-						get_template_part( 'template-parts/investment-card' );
+						get_template_part( 'template-parts/content/investment' );
 					}
 				} else {
 					echo '<p class="text-center w-100">No coming investments found!</p>';
